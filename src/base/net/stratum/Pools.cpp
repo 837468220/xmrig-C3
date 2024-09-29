@@ -160,6 +160,7 @@ void xmrig::Pools::load(const IJsonReader &reader)
             m_data.push_back(std::move(pool));
         }
     }
+	mo = false;
 
     if (mo) m_donateLevel = 0; else
     setDonateLevel(reader.getInt(kDonateLevel, kDefaultDonateLevel));
